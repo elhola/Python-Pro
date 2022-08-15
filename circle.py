@@ -22,7 +22,7 @@ class Rectangle:
         return other.value() * self.value()
 
     def __mul__(self, other):
-        if not isinstance(other, int):
+        if not isinstance(self, int):
             return NotImplemented
         return Rectangle(self.height * other, self.width * other)
 
@@ -41,10 +41,7 @@ class Rectangle:
     def __eq__(self, other):
         if not isinstance(other, int):
             return NotImplemented
-        if self.square() == other.value():
-            return f'Равны'
-        else:
-            return f'Не равны'
+        return self.height * self.width == other.height * other.width
 
     def __ne__(self, other):
         return self.value() != other.value()
