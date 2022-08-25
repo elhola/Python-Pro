@@ -1,7 +1,7 @@
 import student_module
 import settings
 import exeption_module
-import GroupIterator_module
+import groupIterator_module
 
 
 class Group:
@@ -31,4 +31,4 @@ class Group:
         return f'{self.title}\n' + '\n'.join(map(str, self.students))
 
     def __iter__(self):
-        return GroupIterator_module.GroupIterator(self.students)
+        return groupIterator_module.GroupIterator(self.students)
